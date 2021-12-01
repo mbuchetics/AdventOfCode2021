@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3916E15D2757708700713AB5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E15C2757708700713AB5 /* main.swift */; };
+		3916E169275771BC00713AB5 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E168275771BC00713AB5 /* Day1.swift */; };
+		3916E16E2757731600713AB5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E16D2757731600713AB5 /* Algorithms */; };
+		3916E1712757732C00713AB5 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1702757732C00713AB5 /* Collections */; };
+		3916E1732757732C00713AB5 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1722757732C00713AB5 /* DequeModule */; };
+		3916E1752757732C00713AB5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1742757732C00713AB5 /* OrderedCollections */; };
+		3916E1782757767200713AB5 /* Day1+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E1772757767200713AB5 /* Day1+Example.swift */; };
+		3916E17C275778D000713AB5 /* Day1+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E17B275778D000713AB5 /* Day1+Input.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,9 @@
 /* Begin PBXFileReference section */
 		3916E1592757708700713AB5 /* AdventOfCode2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		3916E15C2757708700713AB5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3916E168275771BC00713AB5 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		3916E1772757767200713AB5 /* Day1+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day1+Example.swift"; sourceTree = "<group>"; };
+		3916E17B275778D000713AB5 /* Day1+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day1+Input.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3916E1712757732C00713AB5 /* Collections in Frameworks */,
+				3916E16E2757731600713AB5 /* Algorithms in Frameworks */,
+				3916E1752757732C00713AB5 /* OrderedCollections in Frameworks */,
+				3916E1732757732C00713AB5 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +71,20 @@
 		3916E15B2757708700713AB5 /* AdventOfCode2021 */ = {
 			isa = PBXGroup;
 			children = (
+				3916E165275770D300713AB5 /* Puzzles */,
 				3916E15C2757708700713AB5 /* main.swift */,
 			);
 			path = AdventOfCode2021;
+			sourceTree = "<group>";
+		};
+		3916E165275770D300713AB5 /* Puzzles */ = {
+			isa = PBXGroup;
+			children = (
+				3916E168275771BC00713AB5 /* Day1.swift */,
+				3916E1772757767200713AB5 /* Day1+Example.swift */,
+				3916E17B275778D000713AB5 /* Day1+Input.swift */,
+			);
+			path = Puzzles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +103,12 @@
 			dependencies = (
 			);
 			name = AdventOfCode2021;
+			packageProductDependencies = (
+				3916E16D2757731600713AB5 /* Algorithms */,
+				3916E1702757732C00713AB5 /* Collections */,
+				3916E1722757732C00713AB5 /* DequeModule */,
+				3916E1742757732C00713AB5 /* OrderedCollections */,
+			);
 			productName = AdventOfCode2021;
 			productReference = 3916E1592757708700713AB5 /* AdventOfCode2021 */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +137,10 @@
 				Base,
 			);
 			mainGroup = 3916E1502757708700713AB5;
+			packageReferences = (
+				3916E16C2757731600713AB5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				3916E16F2757732C00713AB5 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 3916E15A2757708700713AB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3916E15D2757708700713AB5 /* main.swift in Sources */,
+				3916E17C275778D000713AB5 /* Day1+Input.swift in Sources */,
+				3916E1782757767200713AB5 /* Day1+Example.swift in Sources */,
+				3916E169275771BC00713AB5 /* Day1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +324,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3916E16C2757731600713AB5 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3916E16F2757732C00713AB5 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3916E16D2757731600713AB5 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3916E16C2757731600713AB5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		3916E1702757732C00713AB5 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3916E16F2757732C00713AB5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		3916E1722757732C00713AB5 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3916E16F2757732C00713AB5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		3916E1742757732C00713AB5 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3916E16F2757732C00713AB5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3916E1512757708700713AB5 /* Project object */;
 }
