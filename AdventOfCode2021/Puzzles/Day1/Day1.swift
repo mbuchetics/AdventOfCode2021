@@ -2,6 +2,19 @@ import Foundation
 import Algorithms
 import Collections
 
+let day1_example = """
+199
+200
+208
+210
+200
+207
+240
+269
+260
+263
+"""
+
 class Day1 {
     
     func part1() {
