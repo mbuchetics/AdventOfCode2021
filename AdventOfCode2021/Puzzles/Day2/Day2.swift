@@ -37,6 +37,8 @@ class Day2 {
         }
         
         let result = h * d
+        
+        print("Day 2 - Part 1")
         print(result)
     }
     
@@ -66,6 +68,8 @@ class Day2 {
         }
         
         let result = h * d
+        
+        print("Day 2 - Part 2")
         print(result)
     }
 }

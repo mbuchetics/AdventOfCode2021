@@ -13,6 +13,10 @@ print("Hello, World!")
 //day1.part1()
 //day1.part2()
 
-let day2 = Day2()
-day2.part1()
-day2.part2()
+//let day2 = Day2()
+//day2.part1()
+//day2.part2()
+
+let day3 = Day3()
+day3.part1()
+day3.part2()

@@ -14,8 +14,8 @@
 		3916E1732757732C00713AB5 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1722757732C00713AB5 /* DequeModule */; };
 		3916E1752757732C00713AB5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1742757732C00713AB5 /* OrderedCollections */; };
 		3916E17C275778D000713AB5 /* Day1+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E17B275778D000713AB5 /* Day1+Input.swift */; };
-		39DD3A9F2758F72D0029F058 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3A9E2758F56E0029F058 /* Day2.swift */; };
-		39DD3AA12758F7750029F058 /* Day2+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AA02758F7750029F058 /* Day2+Input.swift */; };
+		39DD3AA9275A2AB10029F058 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AA7275A138A0029F058 /* Day3.swift */; };
+		39DD3AAA275A2AB40029F058 /* Day3+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AA8275A13950029F058 /* Day3+Input.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +35,10 @@
 		3916E15C2757708700713AB5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3916E168275771BC00713AB5 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
 		3916E17B275778D000713AB5 /* Day1+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day1+Input.swift"; sourceTree = "<group>"; };
-		39DD3A9E2758F56E0029F058 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
-		39DD3AA02758F7750029F058 /* Day2+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Input.swift"; sourceTree = "<group>"; };
+		39DD3AA3275A075A0029F058 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
+		39DD3AA4275A075A0029F058 /* Day2+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day2+Input.swift"; sourceTree = "<group>"; };
+		39DD3AA7275A138A0029F058 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		39DD3AA8275A13950029F058 /* Day3+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Input.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 		3916E165275770D300713AB5 /* Puzzles */ = {
 			isa = PBXGroup;
 			children = (
-				39DD3A9D2758F5660029F058 /* Day2 */,
+				39DD3A9D2758F5660029F058 /* Day3 */,
+				39DD3AA2275A075A0029F058 /* Day2 */,
 				39DD3A9C2758F55F0029F058 /* Day1 */,
 			);
 			path = Puzzles;
@@ -97,11 +100,20 @@
 			path = Day1;
 			sourceTree = "<group>";
 		};
-		39DD3A9D2758F5660029F058 /* Day2 */ = {
+		39DD3A9D2758F5660029F058 /* Day3 */ = {
 			isa = PBXGroup;
 			children = (
-				39DD3A9E2758F56E0029F058 /* Day2.swift */,
-				39DD3AA02758F7750029F058 /* Day2+Input.swift */,
+				39DD3AA7275A138A0029F058 /* Day3.swift */,
+				39DD3AA8275A13950029F058 /* Day3+Input.swift */,
+			);
+			path = Day3;
+			sourceTree = "<group>";
+		};
+		39DD3AA2275A075A0029F058 /* Day2 */ = {
+			isa = PBXGroup;
+			children = (
+				39DD3AA3275A075A0029F058 /* Day2.swift */,
+				39DD3AA4275A075A0029F058 /* Day2+Input.swift */,
 			);
 			path = Day2;
 			sourceTree = "<group>";
@@ -174,10 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39DD3AA12758F7750029F058 /* Day2+Input.swift in Sources */,
 				3916E15D2757708700713AB5 /* main.swift in Sources */,
-				39DD3A9F2758F72D0029F058 /* Day2.swift in Sources */,
+				39DD3AAA275A2AB40029F058 /* Day3+Input.swift in Sources */,
 				3916E17C275778D000713AB5 /* Day1+Input.swift in Sources */,
+				39DD3AA9275A2AB10029F058 /* Day3.swift in Sources */,
 				3916E169275771BC00713AB5 /* Day1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

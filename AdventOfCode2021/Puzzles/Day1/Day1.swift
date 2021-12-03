@@ -37,6 +37,7 @@ class Day1 {
             }
         }
         
+        print("Day 1 - Part 1")
         print(increases)
     }
     
@@ -60,6 +61,7 @@ class Day1 {
             }
         }
         
+        print("Day 1 - Part 2")
         print(increases)
     }
 }
