@@ -56,7 +56,7 @@ class Day3 {
     func part2() {
         let input = day3_input.components(separatedBy: "\n")
         
-        var lines = input.map { (line) in
+        let lines = input.map { (line) in
             line.map { Int(String($0))! }
         }
 
