@@ -83,7 +83,7 @@ class Day5 {
             var x = line.from.x
             var y = line.from.y
             
-            for step in 0 ... length {
+            for _ in 0 ... length {
                 markPoint(x, y)
                 x += dx
                 y += dy
