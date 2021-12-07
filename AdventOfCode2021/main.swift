@@ -28,8 +28,11 @@ print("Hello, World!")
 //let day5 = Day5()
 //day5.part1()
 //day5.part2()
+//
+//let day6 = Day6()
+//day6.part1()
+//day6.part2()
 
-let day6 = Day6()
-day6.part1()
-day6.part2()
-
+let day7 = Day7()
+day7.part1()
+day7.part2()

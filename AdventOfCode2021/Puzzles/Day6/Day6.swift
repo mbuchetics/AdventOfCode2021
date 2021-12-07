@@ -58,5 +58,4 @@ class Day6 {
         
         return next
     }
-    
 }
