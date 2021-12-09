@@ -7,7 +7,7 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Hello, Advent of Code 2021 🎅")
 
 //let day1 = Day1()
 //day1.part1()
@@ -41,6 +41,10 @@ print("Hello, World!")
 //day8.part1()
 //day8.part2()
 
-let day9 = Day9()
-day9.part1()
-day9.part2()
+//let day9 = Day9()
+//day9.part1()
+//day9.part2()
+
+let day10 = Day10()
+day10.part1()
+day10.part2()

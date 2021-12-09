@@ -49,7 +49,7 @@ class Day9 {
             }
         }
         
-        print("Day 8 - Part 1")
+        print("Day 9 - Part 1")
         print(result)
     }
     
@@ -74,7 +74,7 @@ class Day9 {
         let sorted = basins.sorted(by: { $0.count > $1.count })
         let result = sorted[0].count * sorted[1].count * sorted[2].count
 
-        print("Day 8 - Part 2")
+        print("Day 9 - Part 2")
         print(result)
     }
     
