@@ -55,6 +55,10 @@ struct Rect: Equatable, Hashable {
 
 extension Point {
     
+    static var zero: Point {
+        Point(x: 0, y: 0)
+    }
+    
     func manhattanDistance(to other: Point) -> Int {
         return abs(x - other.x) + abs(y - other.y)
     }

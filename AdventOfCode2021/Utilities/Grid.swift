@@ -123,6 +123,17 @@ extension Grid {
     var columns: [[T?]] {
         Array(0 ..< numColumns).map { column($0) }
     }
+    
+    func element(at p: Point, offset: Point = .zero) -> T? {
+        let x = p.x + offset.x
+        let y = p.y + offset.y
+        
+        if x >= 0 && x < numColumns && y >= 0 && y < numRows {
+            return self[x, y]
+        } else {
+            return nil
+        }
+    }
 }
 
 extension Grid: Equatable where T: Equatable {
