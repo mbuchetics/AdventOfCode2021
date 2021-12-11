@@ -49,6 +49,10 @@ print("Hello, Advent of Code 2021 🎅")
 //day10.part1()
 //day10.part2()
 
-let day11 = Day11()
-day11.part1()
-day11.part2()
+//let day11 = Day11()
+//day11.part1()
+//day11.part2()
+
+let day12 = Day11()
+day12.part1()
+day12.part2()

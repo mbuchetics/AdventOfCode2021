@@ -80,6 +80,8 @@
 		39DD3AA8275A13950029F058 /* Day3+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day3+Input.swift"; sourceTree = "<group>"; };
 		39DD3AAC275A2E1D0029F058 /* Day4+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day4+Input.swift"; sourceTree = "<group>"; };
 		39DD3AAD275A2E1D0029F058 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		39F7080827654CF200FED1E4 /* Day12+Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day12+Input.swift"; sourceTree = "<group>"; };
+		39F7080927654CF200FED1E4 /* Day12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day12.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		3916E165275770D300713AB5 /* Puzzles */ = {
 			isa = PBXGroup;
 			children = (
+				39F7080727654CED00FED1E4 /* Day12 */,
 				390DFBB627635F180085F487 /* Day11 */,
 				390DFB9F2762020F0085F487 /* Day10 */,
 				390DFB9A2761EE870085F487 /* Day9 */,
@@ -250,6 +253,15 @@
 				39DD3AAC275A2E1D0029F058 /* Day4+Input.swift */,
 			);
 			path = Day4;
+			sourceTree = "<group>";
+		};
+		39F7080727654CED00FED1E4 /* Day12 */ = {
+			isa = PBXGroup;
+			children = (
+				39F7080927654CF200FED1E4 /* Day12.swift */,
+				39F7080827654CF200FED1E4 /* Day12+Input.swift */,
+			);
+			path = Day12;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
