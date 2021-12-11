@@ -8,25 +8,25 @@
 
 import Foundation
 
-struct Point: Equatable, Hashable {
-    let x: Int
-    let y: Int
+public struct Point: Equatable, Hashable {
+    public let x: Int
+    public let y: Int
 }
 
-struct Line: Equatable, Hashable {
-    let from: Point
-    let to: Point
+public struct Line: Equatable, Hashable {
+    public let from: Point
+    public let to: Point
 }
 
-struct Size: Equatable, Hashable {
-    let width: Int
-    let height: Int
+public struct Size: Equatable, Hashable {
+    public let width: Int
+    public let height: Int
 }
 
-struct Rect: Equatable, Hashable {
-    let id: Int
-    let origin: Point
-    let size: Size
+public struct Rect: Equatable, Hashable {
+    public let id: Int
+    public let origin: Point
+    public let size: Size
     
     init(id: Int, x: Int, y: Int, width: Int, height: Int) {
         self.id = id
@@ -34,15 +34,15 @@ struct Rect: Equatable, Hashable {
         self.size = Size(width: width, height: height)
     }
     
-    var topLeft: Point {
+    public var topLeft: Point {
         return origin
     }
     
-    var bottomRight: Point {
+    public var bottomRight: Point {
         return Point(x: origin.x + size.width - 1, y: origin.y + size.height - 1)
     }
     
-    var points: [Point] {
+    public var points: [Point] {
         var result = [Point]()
         for y in origin.y ... bottomRight.y {
             for x in origin.x ... bottomRight.x {
@@ -53,7 +53,7 @@ struct Rect: Equatable, Hashable {
     }
 }
 
-extension Point {
+public extension Point {
     
     static var zero: Point {
         Point(x: 0, y: 0)

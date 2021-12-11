@@ -1,4 +1,6 @@
 import Foundation
+import Algorithms
+import Collections
 
 public struct Grid<T> {
     public let numColumns: Int
@@ -12,21 +14,17 @@ public struct Grid<T> {
         elements = .init(repeating: initialValue, count: numColumns*numRows)
     }
     
-    public init(lines: [String], value: (String) -> T?) {
-        self.numRows = lines.count
-        self.numColumns = Grid.stringElements(line: lines.first ?? "").count
-        elements = .init(repeating: nil, count: numRows * numColumns)
-        
-        for (r, line) in lines.enumerated() {
-            let elements = Grid.stringElements(line: line)
-            for (c, stringValue) in elements.enumerated() {
-                self[c, r] = value(stringValue)
-            }
-        }
-    }
-    
     private static func stringElements(line: String) -> [String] {
         return line.components(separatedBy: .whitespacesAndNewlines).filter { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
+    }
+    
+    public subscript(point: Point) -> T? {
+        get {
+            return self[point.x, point.y]
+        }
+        set {
+            self[point.x, point.y] = newValue
+        }
     }
     
     public subscript(column: Int, row: Int) -> T? {
@@ -56,6 +54,63 @@ public struct Grid<T> {
         }
     }
 }
+
+// MARK: - Convenience Creators
+
+extension Grid {
+    // Example:
+    // 76 82  2 92 53
+    // 74 33  8 89  3
+    // 80 27 72 26 91
+    // 30 83  7 16  4
+    // 20 56 48  5 13
+    public static func create(from input: String, value: (String) -> T?) -> Grid<T> {
+        let lines = input.components(separatedBy: .newlines)
+        return create(lines: lines, value: value)
+    }
+    
+    public static func create(lines: [String], value: (String) -> T?) -> Grid<T> {
+        let numRows = lines.count
+        let numColumns = Grid.stringElements(line: lines.first ?? "").count
+        var grid = Grid<T>(numColumns: numColumns, numRows: numRows, initialValue: nil)
+        
+        for (r, line) in lines.enumerated() {
+            let elements = Grid.stringElements(line: line)
+            for (c, stringValue) in elements.enumerated() {
+                grid[c, r] = value(stringValue)
+            }
+        }
+        
+        return grid
+    }
+    
+    public static func createSingleDigitGrid(from input: String) -> Grid<Int> {
+        let lines = input.components(separatedBy: .newlines)
+        return createSingleDigitGrid(lines: lines)
+    }
+    
+    // Example:
+    // 548314
+    // 274585
+    // 526455
+    // 614133
+    public static func createSingleDigitGrid(lines: [String]) -> Grid<Int> {
+        var grid = Grid<Int>(numColumns: lines.first?.count ?? 0, numRows: lines.count, initialValue: nil)
+        
+        for y in 0 ..< grid.numRows {
+            let row = lines[y]
+            
+            for (x, c) in row.enumerated() {
+                let h = Int(String(c))!
+                grid[x, y] = h
+            }
+        }
+        
+        return grid
+    }
+}
+
+// MARK: - Convenience Methods
 
 extension Grid {
     
@@ -130,6 +185,47 @@ extension Grid {
         
         if x >= 0 && x < numColumns && y >= 0 && y < numRows {
             return self[x, y]
+        } else {
+            return nil
+        }
+    }
+    
+    func allElements() -> [(Point, T?)] {
+        var result = [(Point, T?)]()
+        for y in 0..<numRows {
+            for x in 0..<numColumns {
+                result.append((Point(x: x, y: y), self[x, y]))
+            }
+        }
+        return result
+    }
+
+    func neighbours(at p: Point, includingDiagonals: Bool) -> [Point] {
+        var points = [
+            point(at: p, offset: Point(x: -1, y: 0)),
+            point(at: p, offset: Point(x: 1, y: 0)),
+            point(at: p, offset: Point(x: 0, y: -1)),
+            point(at: p, offset: Point(x: 0, y: 1)),
+        ]
+        
+        if includingDiagonals {
+            points.append(contentsOf: [
+                point(at: p, offset: Point(x: -1, y: -1)),
+                point(at: p, offset: Point(x: 1, y: 1)),
+                point(at: p, offset: Point(x: 1, y: -1)),
+                point(at: p, offset: Point(x: -1, y: 1)),
+            ])
+        }
+        
+        return Array(points.compacted())
+    }
+    
+    private func point(at p: Point, offset: Point = .zero) -> Point? {
+        let x = p.x + offset.x
+        let y = p.y + offset.y
+        
+        if x >= 0 && x < numColumns && y >= 0 && y < numRows {
+            return Point(x: x, y: y)
         } else {
             return nil
         }

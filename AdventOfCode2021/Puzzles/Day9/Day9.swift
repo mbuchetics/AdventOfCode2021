@@ -15,18 +15,7 @@ class Day9 {
     var heightmap: Grid<Int>
 
     init() {
-        let lines = day9_input.components(separatedBy: .newlines)
-        
-        heightmap = Grid(numColumns: lines.first?.count ?? 0, numRows: lines.count, initialValue: nil)
-        
-        for y in 0 ..< heightmap.numRows {
-            let row = lines[y]
-            
-            for (x, c) in row.enumerated() {
-                let h = Int(String(c))!
-                heightmap[x, y] = h
-            }
-        }
+        heightmap = Grid<Int>.createSingleDigitGrid(from: day9_input)
     }
     
     func part1() {

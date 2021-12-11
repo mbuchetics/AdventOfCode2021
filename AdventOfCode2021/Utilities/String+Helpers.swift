@@ -25,4 +25,8 @@ extension String {
     func integerArray(separator: String = " ") -> [Int] {
         return self.components(separatedBy: separator).map { Int($0)! }
     }
+    
+    var singleDigitIntegerArray: [Int] {
+        return self.map { Int(String($0))! }
+    }
 }

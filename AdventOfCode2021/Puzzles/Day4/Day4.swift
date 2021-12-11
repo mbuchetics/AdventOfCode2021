@@ -137,7 +137,7 @@ class Day4 {
         
         for line in input {
             if line.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                let grid = Grid(lines: gridLines, value: { Item($0.integer) })
+                let grid = Grid.create(lines: gridLines, value: { Item($0.integer) })
                 grids.append(grid)
                 gridLines.removeAll()
             } else {
@@ -146,7 +146,7 @@ class Day4 {
         }
         
         if gridLines.count > 0 {
-            let grid = Grid(lines: gridLines, value: { Item($0.integer) })
+            let grid = Grid.create(lines: gridLines, value: { Item($0.integer) })
             grids.append(grid)
         }
         
