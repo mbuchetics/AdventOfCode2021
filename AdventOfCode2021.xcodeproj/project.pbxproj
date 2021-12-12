@@ -33,6 +33,8 @@
 		3916E1732757732C00713AB5 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1722757732C00713AB5 /* DequeModule */; };
 		3916E1752757732C00713AB5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 3916E1742757732C00713AB5 /* OrderedCollections */; };
 		3916E17C275778D000713AB5 /* Day1+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916E17B275778D000713AB5 /* Day1+Input.swift */; };
+		3939308D2765E5D8008BCE5F /* Day12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F7080927654CF200FED1E4 /* Day12.swift */; };
+		3939308E2765E5DA008BCE5F /* Day12+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F7080827654CF200FED1E4 /* Day12+Input.swift */; };
 		39DD3AA9275A2AB10029F058 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AA7275A138A0029F058 /* Day3.swift */; };
 		39DD3AAA275A2AB40029F058 /* Day3+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AA8275A13950029F058 /* Day3+Input.swift */; };
 		39DD3AAE275A2E200029F058 /* Day4+Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD3AAC275A2E1D0029F058 /* Day4+Input.swift */; };
@@ -336,6 +338,7 @@
 			files = (
 				390DFB67275B7FCC0085F487 /* String+Helpers.swift in Sources */,
 				390DFB9E2761EED60085F487 /* Day9+Input.swift in Sources */,
+				3939308E2765E5DA008BCE5F /* Day12+Input.swift in Sources */,
 				390DFBBA27635F680085F487 /* Day11+Input.swift in Sources */,
 				390DFB8A275F68190085F487 /* Day8.swift in Sources */,
 				390DFB8B275F68270085F487 /* Day8+Input.swift in Sources */,
@@ -343,6 +346,7 @@
 				390DFB6C275CA15A0085F487 /* Day5+Input.swift in Sources */,
 				39DD3AAF275A2E200029F058 /* Day4.swift in Sources */,
 				390DFBA3276202300085F487 /* Day10.swift in Sources */,
+				3939308D2765E5D8008BCE5F /* Day12.swift in Sources */,
 				390DFB6A275CA14E0085F487 /* Day5.swift in Sources */,
 				3916E15D2757708700713AB5 /* main.swift in Sources */,
 				390DFBB5276341270085F487 /* Stack.swift in Sources */,
