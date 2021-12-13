@@ -39,20 +39,6 @@ public struct Grid<T> {
             elements[row*numColumns + column] = newValue
         }
     }
-    
-    func printDebug() {
-        for r in 0..<numRows {
-            var str: String = ""
-            for c in 0..<numColumns {
-                if let value = self[c, r] {
-                    str.append("\(value) ")
-                } else {
-                    str.append("- ")
-                }
-            }
-            print(str)
-        }
-    }
 }
 
 // MARK: - Convenience Creators
@@ -232,8 +218,37 @@ extension Grid {
     }
 }
 
+// MARK: - Equatable & Hashable
+
 extension Grid: Equatable where T: Equatable {
 }
 
 extension Grid: Hashable where T: Hashable {
 }
+
+// MARK: - Printing
+
+extension Grid {
+    
+    func printDebug(valueToString: ((T?) -> String)? = nil) {
+        for r in 0..<numRows {
+            var str: String = ""
+            for c in 0..<numColumns {
+                if let valueToString = valueToString {
+                    let valueStr = valueToString(self[c, r])
+                    str.append(valueStr)
+                } else {
+                    if let value = self[c, r] {
+                        
+                        str.append("\(value) ")
+                    } else {
+                        str.append("- ")
+                    }
+                }                
+            }
+            print(str)
+        }
+    }
+}
+
+
