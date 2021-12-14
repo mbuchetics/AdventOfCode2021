@@ -91,7 +91,7 @@ class Day13 {
         for fold in folds {
             print("")
             grid = foldGrid(grid, with: fold)
-            grid.printDebug(valueToString: { $0 != nil ? "#" : " " })
+            grid.printDebug(valueToString: { $0 != nil ? "█" : "░" })
             print(grid.elements.compacted().count)
         }
         
