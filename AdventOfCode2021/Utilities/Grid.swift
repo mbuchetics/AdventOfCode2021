@@ -186,7 +186,7 @@ extension Grid {
         return result
     }
 
-    func neighbours(at p: Point, includingDiagonals: Bool) -> [Point] {
+    func neighbours(at p: Point, includingDiagonals: Bool = false) -> [Point] {
         var points = [
             point(at: p, offset: Point(x: -1, y: 0)),
             point(at: p, offset: Point(x: 1, y: 0)),

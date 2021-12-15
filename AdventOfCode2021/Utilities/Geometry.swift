@@ -84,7 +84,7 @@ public extension Point {
     }
 }
 
-extension Line {
+public extension Line {
     
     var points: [Point] {
         [from, to]
@@ -95,5 +95,12 @@ extension Line {
         return Line(
             from: Point.fromString(parts[0]),
             to: Point.fromString(parts[1]))
+    }
+}
+
+extension Point: CustomStringConvertible {
+    
+    public var description: String {
+        return "\(x),\(y)"
     }
 }
